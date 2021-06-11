@@ -8,7 +8,7 @@
             "name": "You have done this yet",
             "type": "cppvsdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/Builds/debug/Application.exe",
+            "program": "${workspaceFolder}/Builds/debug/Algorithms.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}/Builds/debug/",

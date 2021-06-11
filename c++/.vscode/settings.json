@@ -9,6 +9,7 @@
         "lenum",
         "lfloat",
         "luint",
+        "nemo",
         "programiv"
     ],
     "files.associations": {
