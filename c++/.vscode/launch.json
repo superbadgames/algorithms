@@ -1,19 +1,30 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "name": "You have done this yet",
-            "type": "cppvsdbg",
-            "request": "launch",
-            "program": "${workspaceFolder}/Builds/debug/Algorithms.exe",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}/Builds/debug/",
-            "environment": [],
-            "console": "externalTerminal"
-        }
-    ]
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Release",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/Builds/release/algorithms.exe",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}/Builds/release/",
+      "environment": [],
+      "console": "externalTerminal"
+    },
+    {
+      "name": "Debug",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/Builds/debug/algorithms.exe",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}/Builds/debug/",
+      "environment": [],
+      "console": "externalTerminal"
+    }
+  ]
 }
