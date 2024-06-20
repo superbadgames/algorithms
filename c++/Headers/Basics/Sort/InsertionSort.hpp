@@ -23,36 +23,23 @@ void InsertionSort(vector<U32>& array)
 
     // Assume the first element is already in the correct order
     // start with second element.
-    std::cout << "In the for loop: going over the array. Here is what it looks like at the start:\n";
-
-    for (U32 printer = 0; printer < length; ++printer)
-    {
-        std::cout << array[printer] << ",";
-    }
-
-    std::cout << std::endl;
-
     for (U32 forIndex = 1; forIndex < length; ++forIndex)
     {
-        std::cout << "forIndex: " << forIndex << std::endl;
         U32 key = array[forIndex];
         // Iterate over array, place key in correct location
         S32 whileIndex = forIndex - 1;
         while (whileIndex >= 0 && array[whileIndex] > key)
         {
-            std::cout << "in the while, j = " << whileIndex << std::endl;
             array[whileIndex + 1] = array[whileIndex];
             --whileIndex;
-            std::cout << "end of one while iteration. whileIndex is now " << whileIndex << std::endl;
         }
-        std::cout << "while loop just ended\n";
         array[whileIndex + 1] = key;
-        std::cout << "end of one iteration. Here's the array now:" << std::endl;
-
-        for (U32 printer = 0; printer < length; ++printer)
-        {
-            std::cout << array[printer] << ",";
-        }
-        std::cout << std::endl;
     }
+    std::cout << "Here is the array when the operation is finished:" << std::endl;
+    for (U32 i = 0; i < length; ++i)
+    {
+        std::cout << array[i] << ",";
+    }
+
+    std::cout << std::endl;
 }
