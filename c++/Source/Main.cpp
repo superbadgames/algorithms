@@ -16,6 +16,7 @@ U32 PrintMenuAndGetInput(void)
         << "5. Linked Lists\n"
         << "6. Stack as an Array\n"
         << "7. Stack as Linked List\n"
+        << "8. Queue as an Array\n"
         << "More to come...\n"
         << std::endl;
     U32 input;
@@ -52,6 +53,10 @@ void ProcessInput(U32 input)
     else if (input == 7)
     {
         StackAsLinkedList();
+    }
+    else if (input == 8)
+    {
+        QueueAsArrayDemo();
     }
     else
     {

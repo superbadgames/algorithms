@@ -12,3 +12,5 @@ void LinkedListDemo(void);
 void StackAsArrayDemo(void);
 
 void StackAsLinkedList(void);
+
+void QueueAsArrayDemo(void);

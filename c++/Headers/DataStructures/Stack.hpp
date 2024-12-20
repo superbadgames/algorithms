@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "framework.hpp"
+#include "Utils/DoubleArraySize.hpp"
 #include <iostream>
 
 // Implemented with an array
@@ -32,7 +33,8 @@ public:
         }
         else if (_sizeOfStack == _sizeOfArray)
         {
-            _DoubleArray();
+            _array = DoubleArraySize<T>(_array, _sizeOfArray);
+            _sizeOfArray *= 2;
         }
         ++_top;
         _array[_top] = value;
@@ -74,18 +76,6 @@ private:
     U32 _top;
     T* _array;
 
-    void _DoubleArray(void)
-    {
-        U32 old_size = _sizeOfArray;
-        _sizeOfArray = _sizeOfArray * 2;
-        T* new_array = new T[_sizeOfArray]{ 0 };
 
-        for (U32 i = 0; i < old_size; ++i)
-        {
-            new_array[i] = _array[i];
-        }
-
-        _array = new_array;
-    }
 };
 
