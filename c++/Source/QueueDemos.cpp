@@ -2,6 +2,7 @@
 #include "framework.hpp"
 #include "Demos.h"
 #include "DataStructures/Queue.hpp"
+#include "DataStructures/QueueLinkedList.hpp"
 
 #include <iostream>
 
@@ -92,4 +93,64 @@ void QueueAsArrayDemo(void)
     std::cout << "Pop that last value: " << queue.Pop() << std::endl;
 
     std::cout << "End of the Queue as an Array Demo\n\n\n";
+}
+
+void QueueAsLinkedListDemo(void)
+{
+    std::cout << "Queue as a Linked List Demo:\n\n"
+        << "Default Queue:\n";
+
+    Queue_LinkedList<U32> queue{};
+    queue.Print();
+
+    std::cout << "Add a few elements...\n\n";
+
+    queue.Push(1);
+
+    queue.Print();
+
+    queue.Push(2);
+    queue.Push(3);
+    queue.Push(5);
+    queue.Push(7);
+
+    std::cout << std::endl;
+    queue.Print();
+
+    std::cout << "Next, pop some values off\n\n";
+
+    std::cout << "Pop: " << queue.Pop() << std::endl;
+    std::cout << "Pop: " << queue.Pop() << std::endl;
+    std::cout << "Pop: " << queue.Pop() << std::endl;
+
+    queue.Print();
+
+    std::cout << "Add Some new values: \n\n";
+
+    queue.Push(100);
+    queue.Push(101);
+    queue.Push(102);
+    queue.Push(103);
+    queue.Push(104);
+
+    queue.Print();
+
+    std::cout << "Now clear out the queue, until we get the error message\n\n";
+
+    std::cout << "Pop: " << queue.Pop() << std::endl;
+    std::cout << "Pop: " << queue.Pop() << std::endl;
+    std::cout << "Pop: " << queue.Pop() << std::endl;
+    std::cout << "Pop: " << queue.Pop() << std::endl;
+    std::cout << "Pop: " << queue.Pop() << std::endl;
+    std::cout << "Pop: " << queue.Pop() << std::endl;
+    std::cout << "Pop: " << queue.Pop() << std::endl;
+
+    std::cout << "The next pop will cause an error:\n";
+    std::cout << "Pop: " << queue.Pop() << std::endl;
+
+    std::cout << "And finally, the empty queue\n";
+
+    queue.Print();
+
+    std::cout << "End of the Queue as a Linked List Demo\n\n";
 }
